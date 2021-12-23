@@ -1,0 +1,103 @@
+/* CSS For CodeTest Michael Gaynor Senior Web Developer & Designer at michael@brand7.net */
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1em;
+    color: #b4b4b4;
+}
+
+/* Circle with animation properties for transitions */
+.circle {
+    margin-top: 40px;
+    margin-right: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    opacity: 1;
+}
+
+/* Text below circle */
+.circle div {
+        font-size: 1.25rem;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+
+/* Sets the circle to transform into a square when clicked */
+.circle:active {
+    border-radius: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    opacity: 1;
+}
+
+/* Circle properties for the easing animation */
+.circle div  {   
+    -webkit-transition: all 800ms ease-in-out;
+    -moz-transition: all 800ms ease-in-out;
+    -o-transition: all 800ms ease-in-out;
+    -ms-transition: all 800ms ease-in-out;
+    transition: all 800ms ease-in-out;
+}
+
+/* Moves the text below the circle when hovering over the circle */
+.circle:hover div {
+    transform: translateY(175px); 
+}
+
+
+
+
+
+.container .row .col:nth-child(1) .circle:hover div,
+.container .row .col:nth-child(2) .circle:hover div,
+.container .row .col:nth-child(3) .circle:hover div,
+.container .row .col:nth-child(4) .circle:hover div,
+.container .row .col:nth-child(5) .circle:hover div {} 
+
+
+
+/* Sets the adjacent siblings to opacity of 50% */
+.circle:hover ~ .circle, .opacity  {opacity: 50%;} 
+
+/* Sets the color for each circle by order of child element */
+.circle:nth-child(1) {color: red;background: red;}
+.circle:nth-child(2) {color: green; background: green;}
+.circle:nth-child(3) {color: blue; background: blue;}
+.circle:nth-child(4) {color: orange; background: orange;}
+.circle:nth-child(5) {color: yellow; background: yellow;}
+
+.circle:hover ~ .circle:nth-child(2n); {opacity: 50%;}
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: #fff;
+    }
+
+    .circle {margin: 2em 1em;}
+}
+
+@media only screen and (max-width: 1024px) {
+    .circle {margin: 2em 1em;}
+}
